@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Facebook, Languages, Linkedin } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 // Content type definition
 type ContentType = {
@@ -430,14 +431,16 @@ export default function Component() {
           priority
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative container mx-auto px-4 text-center text-white">
+        <div className="container mx-auto px-4 text-center text-white">
+          {/* Dark star on top-left, hidden on mobile */}
           <Image
             src="/dark star.png"
             alt="star"
-            className="absolute top-0 right-0 h-12 w-12"
-            height={150}
-            width={150}
+            className="absolute top-32 left-32 hidden md:block"
+            height={130}
+            width={130}
           />
+
           <motion.h1
             className="text-4xl md:text-6xl font-bold mb-6"
             variants={fadeIn}
@@ -447,12 +450,13 @@ export default function Component() {
             {content[lang].hero.subtitle}
           </motion.h1>
 
+          {/* Light star on bottom-right, hidden on mobile */}
           <Image
             src="/light star.png"
             alt="star"
-            className="absolute bottom-0 left-0 h-12 w-12"
-            height={150}
-            width={150}
+            className="absolute bottom-24 right-32 hidden md:block"
+            height={130}
+            width={130}
           />
         </div>
       </motion.section>
@@ -557,11 +561,14 @@ export default function Component() {
         variants={staggerChildren}
         dir={lang === "ar" ? "rtl" : "ltr"}
       >
-        {/* Dark star on top left */}
+        {/* Dark star on top left or top right based on language */}
         <Image
           src="/dark star.png"
           alt="star"
-          className="absolute top-20 left-28"
+          className={cn(
+            "absolute top-20 hidden md:block", // Hide on mobile (md breakpoint)
+            lang === "ar" ? "right-28" : "left-28" // Adjust position based on RTL/LTR
+          )}
           height={150}
           width={150}
         />
@@ -587,11 +594,14 @@ export default function Component() {
           </motion.div>
         </div>
 
-        {/* Light star on bottom right */}
+        {/* Light star on bottom right or bottom left based on language */}
         <Image
           src="/light star.png"
           alt="star"
-          className="absolute bottom-20 right-28"
+          className={cn(
+            "absolute bottom-20 hidden md:block", // Hide on mobile (md breakpoint)
+            lang === "ar" ? "left-28" : "right-28" // Adjust position based on RTL/LTR
+          )}
           height={150}
           width={150}
         />
@@ -652,7 +662,9 @@ export default function Component() {
         <Image
           src="/light star.png"
           alt="star"
-          className="absolute bottom-20 left-28"
+          className={`absolute bottom-20 ${
+            lang === "ar" ? "right-28" : "left-28"
+          } hidden md:block`}
           height={150}
           width={150}
         />
