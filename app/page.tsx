@@ -78,8 +78,8 @@ type ContentType = {
 const content: ContentType = {
   en: {
     nav: {
-      about: "About Us",
-      services: "Our Services",
+      about: "About",
+      services: "Services",
       contact: "Contact",
     },
     hero: {
@@ -372,9 +372,9 @@ export default function Component() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container mx-auto px-4 py-4 ">
+        <div className="container mx-auto px-2 py-3">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-4">
               <Image
                 src="/logo.png"
                 alt="Sky Insurance"
@@ -383,7 +383,7 @@ export default function Component() {
               />
             </Link>
 
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-5">
               <Link href="/" className="hover:text-blue-900 transition-colors">
                 {content[lang].nav.about}
               </Link>
