@@ -78,7 +78,7 @@ type ContentType = {
 const content: ContentType = {
   en: {
     nav: {
-      about: "About",
+      about: "Home",
       services: "Services",
       contact: "Contact",
     },
@@ -196,7 +196,7 @@ const content: ContentType = {
   },
   ar: {
     nav: {
-      about: "معلومات عنا",
+      about: "الصفحة الرئيسيه",
       services: "خدماتنا",
       contact: "اتصل بنا",
     },
@@ -395,7 +395,7 @@ export default function Component() {
               </Link>
 
               <Link
-                href="#services"
+                href="#service"
                 className="hover:text-blue-900 transition-colors"
               >
                 {content[lang].nav.services}
@@ -729,6 +729,7 @@ export default function Component() {
 
       {/* Learn How We Can Protect You Section */}
       <motion.section
+        id="service"
         className="py-24 bg-[#22519f] text-white"
         initial="hidden"
         whileInView="visible"
