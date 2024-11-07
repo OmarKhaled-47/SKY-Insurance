@@ -639,6 +639,7 @@ export default function Component() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={staggerChildren}
+        dir={lang === "ar" ? "rtl" : "ltr"}
       >
         <div className="container mx-auto px-4">
           <motion.div variants={fadeIn} className="text-center mb-16">
@@ -787,6 +788,7 @@ export default function Component() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={staggerChildren}
+        dir={lang === "ar" ? "rtl" : "ltr"}
       >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
