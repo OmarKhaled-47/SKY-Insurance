@@ -485,9 +485,16 @@ export default function Component() {
               <h2 className="text-6xl font-light text-blue-800">
                 {content[lang].story.title}
               </h2>
-              <p className="text-gray-800 text-xl">
-                {content[lang].story.description}
-              </p>
+
+              {content[lang].story.description.map((description, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeIn}
+                  className="flex items-start space-x-4"
+                >
+                  <p className="text-gray-800 text-xl">{description}</p>
+                </motion.div>
+              ))}
               <Image
                 src="/light star.png"
                 alt="star"
@@ -502,9 +509,18 @@ export default function Component() {
               <h2 className="text-6xl font-light text-blue-800">
                 {content[lang].story.mission.title}
               </h2>
-              <p className="text-gray-800 text-xl">
-                {content[lang].story.mission.description}
-              </p>
+
+              {content[lang].story.mission.description.map(
+                (description, index) => (
+                  <motion.div
+                    key={index}
+                    variants={fadeIn}
+                    className="flex items-start space-x-4"
+                  >
+                    <p className="text-gray-800 text-xl">{description}</p>
+                  </motion.div>
+                )
+              )}
               <Image
                 src="/dark star.png"
                 alt="star"
@@ -534,12 +550,21 @@ export default function Component() {
               />
             </motion.div>
             <motion.div variants={fadeIn} className="space-y-6">
-              <h2 className="text-3xl font-bold text-blue-600">
+              <h2 className="text-6xl font-light text-blue-800">
                 {content[lang].story.vision.title}
               </h2>
-              <p className="text-gray-600">
-                {content[lang].story.vision.description}
-              </p>
+
+              {content[lang].story.vision.description.map(
+                (description, index) => (
+                  <motion.div
+                    key={index}
+                    variants={fadeIn}
+                    className="flex items-start space-x-4"
+                  >
+                    <p className="text-gray-800 text-xl">{description}</p>
+                  </motion.div>
+                )
+              )}
               <Image
                 src="/light star.png"
                 alt="star"
