@@ -822,7 +822,7 @@ export default function Component() {
                     <Linkedin />
                   </a>
                   <a
-                    href="https://www.facebook.com/skyholding"
+                    href="https://web.facebook.com/skyinsurancebrokerageeg"
                     className="hover:opacity-80"
                   >
                     <Facebook />
