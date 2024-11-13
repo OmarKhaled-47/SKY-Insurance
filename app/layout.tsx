@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
+import { LanguageProvider } from "@/app/LanguageContext";
+import Navbar from "@/app/components/Navbar";
 import localFont from "next/font/local";
 import "./globals.css";
+import type { Metadata } from "next";
+import ContactSection from "@/app/components/ContactSection";
 
-// const montserrat = localFont({
-//   src: "./fonts/Montserrat-VariableFont_wght.ttf",
-//   variable: "--font-montserrat",
-//   weight: "100 900",
-// });
 const Arial = localFont({
   src: "./fonts/Arial.ttf",
   variable: "--font-Arial",
@@ -14,7 +12,7 @@ const Arial = localFont({
 
 export const metadata: Metadata = {
   title: "Sky Insurance",
-  description: "Sky Insurance",
+  description: "Preserving Prosperity, Providing Peace of Mind",
 };
 
 export default function RootLayout({
@@ -24,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${Arial.variable} antialiased`}>{children}</body>
+      <body className={`${Arial.variable} antialiased`}>
+        <LanguageProvider>
+          <Navbar />
+          <main>{children}</main>
+          <ContactSection />
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
