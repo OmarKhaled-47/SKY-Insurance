@@ -5,10 +5,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    // Extract form data from the request body
     const { firstName, lastName, email, message } = await request.json();
 
-    // Prepare the email content
     const data = await resend.emails.send({
       from: "Sky Insurance <onboarding@resend.dev>",
       to: ["ib@sky.eg"],
