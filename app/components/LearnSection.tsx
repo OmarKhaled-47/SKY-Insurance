@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/app/LanguageContext";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const content = {
   en: {
@@ -88,13 +89,15 @@ export default function LearnSection() {
           </motion.div>
         </div>
         <motion.div variants={fadeIn} className="text-center">
-          <Button
-            variant="outline"
-            className="rounded-full bg-transparent text-xl"
-            size="lg"
-          >
-            {content[language as keyof typeof content].cta}
-          </Button>
+          <Link href="/services" passHref>
+            <Button
+              variant="outline"
+              className="rounded-full bg-transparent text-xl"
+              size="lg"
+            >
+              {content[language as keyof typeof content].cta}
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </motion.section>
