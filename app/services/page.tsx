@@ -139,6 +139,7 @@ export default function Services() {
         variants={fadeIn}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="py-12 md:py-16"
+        dir={language === "ar" ? "rtl" : "ltr"}
       >
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12">
@@ -173,6 +174,7 @@ export default function Services() {
         variants={fadeIn}
         transition={{ duration: 0.5, delay: 0.4 }}
         className="bg-gray-50 py-12 md:py-16"
+        dir={language === "ar" ? "rtl" : "ltr"}
       >
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl md:text-5xl font-light text-blue-800">

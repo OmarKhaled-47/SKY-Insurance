@@ -131,7 +131,7 @@ export default function ValuesSection() {
                 {item.title}
               </h3>
               <p
-                className="text-gray-800 text-xl text-left
+                className="text-gray-800 text-xl 
               "
               >
                 {item.description}
