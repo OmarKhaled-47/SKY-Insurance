@@ -117,7 +117,7 @@ export default function ValuesSection() {
             <motion.div
               key={item.title}
               variants={fadeIn}
-              className="text-center space-y-4"
+              className="space-y-4"
             >
               <div className="mx-auto rounded-full flex items-center justify-center">
                 <Image
@@ -127,10 +127,15 @@ export default function ValuesSection() {
                   width={100}
                 />
               </div>
-              <h3 className="text-3xl font-light text-blue-800">
+              <h3 className="text-3xl font-light text-blue-800 text-center ">
                 {item.title}
               </h3>
-              <p className="text-gray-800 text-xl">{item.description}</p>
+              <p
+                className="text-gray-800 text-xl text-left
+              "
+              >
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>

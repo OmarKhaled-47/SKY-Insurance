@@ -128,13 +128,13 @@ const content = {
     home: "Home",
     services: "Services",
     contact: "Contact",
-    offers: "Offers",
+    // offers: "Offers",
   },
   ar: {
     home: "الصفحة الرئيسية",
     services: "خدماتنا",
     contact: "اتصل بنا",
-    offers: "عروضنا",
+    // offers: "عروضنا",
   },
 };
 
@@ -183,12 +183,12 @@ export default function Component() {
             <NavLink href="#contact" textColor={textColor}>
               {content[language as keyof typeof content].contact}
             </NavLink>
-            <NavLink
+            {/* <NavLink
               href="https://insurance-offers.vercel.app/"
               textColor={textColor}
             >
               {content[language as keyof typeof content].offers}
-            </NavLink>
+            </NavLink> */}
             <Button
               variant="ghost"
               size="icon"
