@@ -73,26 +73,17 @@ export default function ComingSoon() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-white">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Phone className="w-8 h-8" />
-              <a
-                href="tel:15759"
-                className="text-4xl font-semibold hover:text-blue-300 transition-colors"
-              >
+              <Phone className="w-5 h-5" />
+              <a href="tel:15759" className="text-lg font-semibold hover:text-blue-300 transition-colors">
                 15759
               </a>
             </div>
             <div className="flex space-x-4">
-              <a
-                href="https://www.linkedin.com/company/sky-insurance-brokerage"
-                className="hover:text-blue-300 transition-colors"
-              >
-                <Linkedin className="w-8 h-8" />
+              <a href="#" className="hover:text-blue-300 transition-colors">
+                <Linkedin className="w-6 h-6" />
               </a>
-              <a
-                href="https://www.facebook.com/skyinsurancebrokerage"
-                className="hover:text-blue-300 transition-colors"
-              >
-                <Facebook className="w-8 h-8" />
+              <a href="#" className="hover:text-blue-300 transition-colors">
+                <Facebook className="w-6 h-6" />
               </a>
             </div>
           </div>

@@ -82,16 +82,10 @@ export default function ComingSoon() {
               </a>
             </div>
             <div className="flex space-x-4">
-              <a
-                href="https://www.linkedin.com/company/sky-insurance-brokerage"
-                className="hover:text-blue-300 transition-colors"
-              >
+              <a href="#" className="hover:text-blue-300 transition-colors">
                 <Linkedin className="w-8 h-8" />
               </a>
-              <a
-                href="https://www.facebook.com/skyinsurancebrokerage"
-                className="hover:text-blue-300 transition-colors"
-              >
+              <a href="#" className="hover:text-blue-300 transition-colors">
                 <Facebook className="w-8 h-8" />
               </a>
             </div>
