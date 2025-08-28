@@ -56,7 +56,7 @@ export default function ComingSoon() {
 
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Stay tuned for the launch of our exciting new insurance brokerage
-            platform. Sign up below to be the first to know when we go live.
+            platform.
           </p>
         </motion.div>
 
