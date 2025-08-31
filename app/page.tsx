@@ -89,7 +89,7 @@ export default function ComingSoon() {
                 <Linkedin className="w-8 h-8" />
               </a>
               <a
-                href="https://www.facebook.com/skyinsurancebrokerage"
+                href="https://www.facebook.com/skyinsurancebrokerageeg"
                 className="hover:text-blue-300 transition-colors"
               >
                 <Facebook className="w-8 h-8" />
