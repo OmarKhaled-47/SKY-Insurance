@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Phone, Linkedin, Facebook } from "lucide-react";
+import { Phone, Linkedin, Facebook, Instagram } from "lucide-react";
 
 export default function ComingSoon() {
   const fadeIn = {
@@ -84,15 +84,21 @@ export default function ComingSoon() {
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/company/sky-insurance-brokerage"
-                className="hover:text-blue-300 transition-colors"
+                className="hover:text-blue-400 transition-colors"
               >
                 <Linkedin className="w-8 h-8" />
               </a>
               <a
                 href="https://www.facebook.com/skyinsurancebrokerageeg"
-                className="hover:text-blue-300 transition-colors"
+                className="hover:text-blue-600 transition-colors"
               >
                 <Facebook className="w-8 h-8" />
+              </a>
+              <a
+                href="https://www.instagram.com/skyinsurancebrokerage/"
+                className="hover:text-rose-700 transition-colors"
+              >
+                <Instagram className="w-8 h-8" />
               </a>
             </div>
           </div>
